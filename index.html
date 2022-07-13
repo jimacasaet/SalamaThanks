@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Comptible" content="ie=edge" />
+        <title>SalamaThanks</title> 
+        <link rel="icon" type="image/x-icon" href="images/icon.svg">
+        <link rel="stylesheet" href="styles.css" />                                     <!-- CSS stylesheet linking -->
+        <link rel="script" href="main.js" />                                            <!-- JavaScript script linking -->
+    </head>
+
+    <body>
+        <!-- NAVIGATION BAR ------------------------------->
+        <div class="nav-container">
+            <nav>
+                <a href = "index.html">
+                    <img class="logo-home-button" src="images/logo.svg">
+                </a>
+
+                <ul class="nav-items">
+                    <!--
+                    additional HTML links for future iterations
+                    
+                    <li>
+                        <a href="index.html">TRANSLATE</a>
+                    </li>
+                    
+                    <li>
+                        <a href="project.html">ABOUT</a>
+                    </li>
+
+                    -->
+                    <li>
+                        <div class = "feedback-button" onclick = "openFeedback()">FEEDBACK</div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+        <!-- BLANK CONTAINER ------------------------------>                            <!-- blank container for space between I/O area and header -->
+        <div class="blank-container">
+        </div>
+
+
+
+        <div class="wrapper">
+
+            <!-- LANGUAGE SWITCH -------------------------->
+            <div class="swap-lang-container">
+                <!-- Language 1 -->
+                <div class="language1-container">
+                    <div class = "language1" id = "fromLanguage">FILIPINO</div>
+                </div>
+
+                <!-- switch button | enables swapLanguages() function when clicked -->
+                <div class="swap-lang-button-container">
+                    <img class = "swap-lang-button" src="buttons/swap-lang-button.svg" onclick="swapLanguages()">
+                </div>
+
+                <!-- Language 2 -->
+                <div class="language2-container">
+                    <div class = "language2" id = "toLanguage">ENGLISH</div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- I/O AREA --------------------------------->
+            <div class="io-container">
+
+                <!-- input field -->
+                <div class="input-container">
+
+                    <!-- clear button | clears input field when clicked -->
+                    <div class="clear-button-container">
+                        <img class="clear-button" src="buttons/clear-button.svg" onclick="clearInput()">
+                    </div>
+
+                    <!-- input text field | accepts input to be translated -->
+                    <div class="input-text-box">
+                        <textarea class = "input-text" placeholder = "Input Text to Translate" id = "inputText" oninput = "checkForTranslation()" style = "resize: none;" spellcheck="false" maxlength="250" onkeyup = "characterCount()"></textarea>
+                    </div>
+
+                    <!-- status containers for character count and microphone activity -->
+                    <div class = "bottom-info-status-container">
+
+                        <!-- microphone status icon | signifies whether or not the microphone is accepting input -->
+                        <div class = "mic-status-container">
+                            <img class = "mic-status-icon" id = "mic-status-icon" src="images/not-speaking-icon.png">
+                        </div>
+
+                        <!-- character count status | signifies how many characters were input over the character limit -->
+                        <div class = "characters"> 
+                            <span class = "signal-number">0</span>
+                            <span class = "limit-number">/ 250</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- output field -->
+                <div class="output-container">
+
+                    <!-- copy button | copies the output to the user's clipboard -->
+                    <div class="copy-button-container">
+                        <img class="copy-button" src="buttons/copy-button.svg" onclick = "copyOutput()">
+                    </div>
+                    
+                    <!-- output text field | outputs the translated text -->
+                    <div class="output-text-box">
+                        <div class = "output-text" id = "outputText"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- MIC AND SPEAKER CONTAINER ---------------->
+            <div class="mic-and-speaker-container">
+                <!-- microphone button | accepts a voice input and displays it to the input text field -->
+                <div class="mic-container">
+                    <img class="mic-button" src="buttons/mic-button.svg" onclick = "speechToText()">
+                </div>
+
+                <!-- speaker button | outputs the text in the output text field in speech form -->
+                <div class="speaker-container">
+                    <img class="speaker-button" src="buttons/speaker-button.svg" onclick = "textToSpeech()">
+                </div>
+            </div>
+
+        </div>
+        
+
+
+
+
+        
+
+        <!-- BLANK CONTAINER ------------------------------>                            <!-- blank container for space between I/O area and footer -->
+        <div class="blank-container">
+        </div>
+
+
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <h2>TEAM SALAMATHANKS</h2>
+        </div>
+
+        
+
+        <script src="main.js"></script>
+    </body>
+
+
+</html>

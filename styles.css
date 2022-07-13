@@ -1,0 +1,562 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* FONT FACES */
+@font-face {
+    /* for swap language */
+    font-family: Visby Round CF Demi Bold;
+    src: url(fonts/VisbyRoundCF-DemiBold.otf);
+}
+
+@font-face {
+    /* for footer */
+    font-family: Visby Round CF Regular;
+    src: url(fonts/VisbyRoundCF-Regular.otf);
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    background: #FFFFFF;
+}
+
+
+
+
+
+/* NAVIGATION BAR */
+.nav-container {
+    background: #EAEAEA;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    height: 7vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+}
+
+nav .logo-home-button {
+    display: flex;
+    position: relative;
+    height: calc((4.5vh + 2.5vw)/2);
+    margin-left: 1.5vw;
+    margin-right: 0px;
+}
+
+nav ul {
+    display: flex;
+    margin-right: 1.5vw;
+}
+
+
+.nav-items li {
+    display: flex;
+    list-style: none;
+    margin-right: 2.5vw;
+    position: relative;
+}
+
+.nav-items li:nth-last-of-type(1) {
+    margin: 0;
+}
+
+.nav-items li a {
+    color: #505050;
+    font-family: 'Visby Round CF Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc((0.8vw + 1.4vh)/2);
+    line-height: 3vh;
+    letter-spacing: 0.5em;
+    text-decoration: none;
+
+    opacity: 75%;
+    transition: 500ms;
+}
+
+.nav-items li a:hover::after {
+    width: calc(100% - 2px);
+}
+
+.nav-items li a::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #4F6D7B;
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    transition: 500ms;
+}
+
+.feedback-button {
+    color: #505050;
+    font-family: 'Visby Round CF Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc((0.8vw + 1.4vh)/2);
+    line-height: 3vh;
+    letter-spacing: 0.5em;
+    text-decoration: none;
+
+    opacity: 75%;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.feedback-button:hover::after {
+    width: calc(100% - 2px);
+}
+
+.feedback-button::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #4F6D7B;
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    transition: 500ms;
+}
+
+
+
+
+/* BODY */
+.blank-container {
+    height: 9vh;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
+.sub-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+
+/* SWAP LANGUAGE */
+.swap-lang-container {
+    height: 3.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swap-lang-button-container {
+    width: 10%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language1-container {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2vh;
+}
+
+.language2-container {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2vh;
+}
+
+.swap-lang-button {
+    height: calc((3vh + 1.7vw)/2);
+    margin: 0;
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.swap-lang-button:hover {
+    opacity: 75%;
+    transition: 500ms;
+}
+
+.swap-lang-button:active{
+    opacity: 25%;
+    transition: 100ms;
+
+    -webkit-filter: drop-shadow(-0.5px -0.5px 0.5px #000);
+    filter: drop-shadow(-0.5px -0.5px 0.5px #000);
+}
+
+
+.language1, .language2 {
+    font-family: "Visby Round CF Demi Bold", sans-serif;
+    font-weight: 600;
+    font-size: calc((3vh + 1.7vw)/2);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: #4F6D7A;
+}
+
+
+
+/* I/O */
+.io-container {
+    background: #EAEAEA;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    
+    height: 55vh;
+    margin: 2.5vh 0;
+}
+
+.input-container {
+    width: 50%;
+    height: 55vh;
+    border-right: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.output-container {
+    width: 50%;
+    height: 55vh;
+}
+
+.clear-button-container {
+    display: flex;
+    justify-content: flex-start;
+    width: calc(100% - 5vh);
+    height: 2.5vh;
+    margin: 2.5vh 2.5vh;
+}
+
+.clear-button {
+    height: 100%;
+    opacity: 25%;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.clear-button:hover, .copy-button:hover {
+    opacity: 50%;
+}
+
+.copy-button-container{
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 5vh);
+    height: 3vh;
+    margin: 2.5vh 2.5vh;
+}
+
+.copy-button {
+    height: 100%;
+    opacity: 25%;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.clear-button:active, .copy-button:active {
+    opacity: 75%;
+    -webkit-filter: drop-shadow(-0.5px -0.5px 0.5px #000);
+    filter: drop-shadow(-0.5px -0.5px 0.5px #000);
+}
+
+.input-text-box {
+    margin: 1.85vh 3vw;
+    width: calc(100% - 4vw);
+    height: calc(100% - 15vh);
+}
+
+.input-text {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background:#eaeaea;
+    outline: none;
+
+    font-family: 'Visby Round CF Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc((2vh + 1.5vw)/2);
+    line-height: 2.5vh;
+
+    text-align: left;
+
+    color: #505050;
+
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.bottom-info-status-container {
+    height: 5vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.characters {
+    font-family: 'Visby Round CF Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc((1.5vh + 0.75vw)/2);
+
+    text-align: right;
+
+    color: #505050;
+    opacity: 50%;
+    
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: calc((1vw + 1vh)/2);
+
+    margin-right: 1vw;
+}
+
+.mic-status-container {
+    height: 100%;
+    width: calc((2.5vh + 1.5vw)/2);
+    margin-left: 1vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: calc((1vw + 1vh)/2);
+}
+
+.mic-status-icon {
+    opacity: 40%;
+    height: calc((2.5vh + 1.5vw)/2);
+    
+}
+
+.output-text-box {
+    margin: 1.85vh 3vw;
+    width: calc(100% - 4vw);
+    height: calc(100% - 15vh);
+}
+
+.output-text {
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Visby Round CF Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc((2vh + 1.5vw)/2);
+    line-height: 2.5vh;
+
+    color: #505050;
+
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+
+
+/* MIC AND SPEAKER */
+.mic-and-speaker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.5vh;
+}
+
+.mic-container, .speaker-container {
+    height: 100%;
+    margin-right: 5vh;
+    margin-left: 5vh;
+}
+
+.mic-button, .speaker-button {
+    height: 100%;
+    opacity: 100%;
+    transition: 500ms;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.mic-button:hover, .speaker-button:hover {
+    opacity: 75%;
+}
+
+.mic-button:active, .speaker-button:active {
+    opacity: 25%;
+    -webkit-filter: drop-shadow(-0.5px -0.5px 0.5px #000);
+    filter: drop-shadow(-0.5px -0.5px 0.5px #000);
+}
+
+
+
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    height: 5vh;
+    left: 0;
+    bottom: 0;
+    background: #EAEAEA;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+h2 {
+    font-family: "Visby Round CF Regular", sans-serif;
+    font-weight: 600;
+    font-size: calc((1vw + 1.85vh)/2);
+    text-align: center;
+    letter-spacing: 0.8em;
+    margin-top: 1vh;
+    
+
+    color: rgba(80, 80, 80, 0.5);
+
+}
+
+
+
+
+
+
+
+
+/* PROJECT PAGE ONLY ---------------------------------------------------------------*/
+.left-wrap {
+    width: 65%;
+}
+
+.mid-wrap {
+    width: 15%;
+}
+
+.right-wrap {
+    width: 20%;
+}
+
+
+/* CONTACT US */
+.talk-to-us-container {
+    background: #EAEAEA;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 5%;
+}
+
+h3 {
+    color: #505050;
+    font-family: "Visby Round CF Demi Bold", sans-serif;
+    font-weight: 600;
+    font-size: 100%;
+    line-height: 25px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    padding-bottom: 5%;
+}
+
+h4 {
+    color: #505050;
+    font-family: 'Visby Round CF Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+h5 {
+    color: #4F6D7A;
+    font-family: "Visby Round CF Demi Bold", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    padding-top: 10%;
+    padding-bottom: 1%;
+    align-items: baseline;
+}
+
+h6 {
+    color: #505050;
+    font-family: 'Visby Round CF Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+.contact-us-button-container {
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: 10%;
+}
+
+.contact-us-button {
+    background: #DD6E42;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #DD6E42;
+
+    width: 100%;
+
+    color: #FFFFFF;
+    font-family: "Visby Round CF Demi Bold", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+
+    transition: ease-out 300ms;
+}
+
+
+.contact-us-button:hover {
+    background: #FFFFFF;
+    border-color: #DD6E42;
+
+    color: #DD6E42;
+
+    opacity: 50%;
+}
+
+
+.contact-us-button:active {
+    transition: 100ms;
+    opacity: 100%;
+    -webkit-filter: drop-shadow(-0.5px -0.5px 1 #000);
+    filter: drop-shadow(-0.5px -0.5px 1 #000);
+}
