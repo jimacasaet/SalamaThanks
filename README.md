@@ -1,3 +1,3 @@
-# SalamaThanksV3 QA
+# SalamaThanksV3 QC
 
-Implemented SalamaThanks (Baldonado, et. al.) for QA purposes. Trained models from scratch, and recreated system from start to finish.
+Implemented SalamaThanks (by Baldonado, et. al./EEE 199) for code quality checking purposes. Trained models from scratch, and recreated system from start to finish.
